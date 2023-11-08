@@ -1,7 +1,7 @@
 <div class="container">
   <h3>Search Results</h3>
   <% if @results.present? %>
-    <%= render partial: 'search_result', collection: results, as: :result %>
+    <%= render partial: 'search_result', collection: @results, as: :result %>
   <% else %>
     <h4>Nothing here, chief!</h4>
   <% end %>
