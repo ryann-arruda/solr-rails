@@ -70,6 +70,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def search
+    @results = User.search { fulltext "#{params[:q]}"}.results 
+  end
+
   private
 
     # Use callbacks to share common setup or constraints between actions.
